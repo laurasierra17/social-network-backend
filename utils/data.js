@@ -35,11 +35,6 @@ const possibleReactions = [
 // Get a random item given an array
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-// Get random username
-const getRandomUsername = () => {
-  return getRandomArrItem(usernames);
-}
-
 // Function to generate random thoughts that we can add to the database. Includes thoughts reactions.
 const getRandomThoughts = (int) => {
   let results = [];
