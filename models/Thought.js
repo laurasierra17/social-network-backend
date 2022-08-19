@@ -30,12 +30,14 @@ const thoughtSchema = new Schema(
     }
 );
 
+// Virtual property that retrieves the length of the thought's reactions array field on query
 thoughtSchema
     .virtual('reactionCount')
     .get(function () {
         return this.reactions.length;
     });
 
+// Initialize the thought model
 const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;

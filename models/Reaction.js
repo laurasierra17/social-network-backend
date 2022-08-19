@@ -1,6 +1,6 @@
 const { Schema, Types } = require('mongoose');
 const moment = require('moment');
-
+// Boilerplate for the reactions array in the thought model
 const reactionSchema = new Schema(
     {
         reactionId: {
