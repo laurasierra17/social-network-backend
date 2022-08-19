@@ -10,7 +10,6 @@ connection.once('open', async () => {
   await User.deleteMany({});
 
   const users = [];
-  // const thoughts = getRandomThoughts(10);
 
   for (let i = 0; i < usernames.length; i++) {
     const username = usernames[i];
@@ -23,10 +22,7 @@ connection.once('open', async () => {
   }
 
   await User.collection.insertMany(users);
-  // await Thought.collection.insertMany(thoughts);
 
-  console.table(users);
-  // console.table(thoughts);
   console.info('Seeding complete! 🌱');
   process.exit(0);
 });
