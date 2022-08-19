@@ -4,8 +4,6 @@ const User = require('../models/User');
 module.exports = {
     getUsers(req, res) {
         User.find()
-            .populate('thoughts')
-            .populate('friends')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err));
     },
